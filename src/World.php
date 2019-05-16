@@ -6,6 +6,15 @@ namespace Mars;
 
 class World
 {
+    private $init_point;
+    private $end_point;
+
+    public function __construct(array $init_point, array $end_point)
+    {
+        $this->init_point = $init_point;
+        $this->end_point = $end_point;
+    }
+
     /**
      * if move not equals 0 then move it one unit
      *
@@ -70,6 +79,7 @@ class World
      * @throws \Exception
      */
     public function index(array $position, String $command): array
+//    public function index(array $position, String $command): ?string
     {
         //$position length must be 3 (x, y, head)
         if (count($position) != 3) {
@@ -96,5 +106,6 @@ class World
         }
         //array length must be 3 (x, y, head)
         return [$x, $y, $head];
+//        return "$x $y $head <br>";
     }
 }
