@@ -1,0 +1,7 @@
+{
+    "name": "metromarket/code-test-mars",
+    "autoload": {
+        "psr-4": { "Mars\\": "src/" }
+    },
+    "require": {}
+}
